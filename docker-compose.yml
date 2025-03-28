@@ -19,7 +19,7 @@ services:
     environment:
       DB_URL: postgres://postgres:postgres@db:5432/cmms
     ports:
-      - "3001:3001"
+      - "8080:3001"
 
   client:
     build: ./client
