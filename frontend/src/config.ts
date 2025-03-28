@@ -31,7 +31,7 @@ export const apiUrl = process.env.REACT_APP_API_URL
   ? process.env.REACT_APP_API_URL.endsWith('/')
     ? process.env.REACT_APP_API_URL
     : process.env.REACT_APP_API_URL + '/'
-  : 'http://localhost:8080/';
+  : 'http://82.25.115.95:3001/';
 // TODO
 // export const zendeskKey = process.env.REACT_APP_ZENDESK_KEY ?? '';
 export const muiLicense = process.env.REACT_APP_MUI_X_LICENSE ?? '';
