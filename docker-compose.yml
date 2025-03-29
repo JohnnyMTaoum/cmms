@@ -18,6 +18,7 @@ services:
       DB_URL: jdbc:postgresql://db:5432/cmms
       DB_USERNAME: postgres
       DB_PASSWORD: postgres
+      FRONTEND_URL: http://82.25.115.95
     ports:
       - "8080:8080"
 
