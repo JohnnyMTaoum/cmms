@@ -18,7 +18,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     private static final long MAX_AGE_SECS = 3600;
     private final CurrentUserResolver currentUserResolver;
-    @Value("${frontend.url}")
+    @Value("${FRONTEND_URL}")
     private String frontendUrl;
 
     @Override
