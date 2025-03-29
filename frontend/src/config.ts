@@ -27,11 +27,8 @@ export const amplifyConfig = {
 export const googleMapsConfig = {
   apiKey: process.env.REACT_APP_GOOGLE_KEY
 };
-export const apiUrl = process.env.REACT_APP_API_URL
-  ? process.env.REACT_APP_API_URL.endsWith('/')
-    ? process.env.REACT_APP_API_URL
-    : process.env.REACT_APP_API_URL + '/'
-  : 'http://82.25.115.95:8080/';
+export const apiUrl = "http://82.25.115.95:8080";
+
 // TODO
 // export const zendeskKey = process.env.REACT_APP_ZENDESK_KEY ?? '';
 export const muiLicense = process.env.REACT_APP_MUI_X_LICENSE ?? '';
