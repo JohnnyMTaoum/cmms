@@ -17,7 +17,8 @@ services:
     depends_on:
       - db
     environment:
-      DB_URL: postgres://postgres:postgres@db:5432/cmms
+      DB_URL: postgres://admin:7pv8!ThH@localhost:5432/cmms
+
     ports:
       - "8080:8080"
 
