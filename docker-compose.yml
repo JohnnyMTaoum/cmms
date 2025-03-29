@@ -16,8 +16,8 @@ services:
   restart: always
   environment:
     DB_URL: jdbc:postgresql://db:5432/cmms
-    DB_USERNAME: admin
-    DB_PASSWORD: 7pv8!ThH
+    DB_USERNAME: postgres
+    DB_PASSWORD: postgres
   ports:
     - "8080:8080"
 
