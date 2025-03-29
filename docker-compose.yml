@@ -14,8 +14,6 @@ services:
   api:
     build: ./api
     restart: always
-    depends_on:
-      - db
     environment:
       DB_URL: postgres://admin:7pv8!ThH@localhost:5432/cmms
 
