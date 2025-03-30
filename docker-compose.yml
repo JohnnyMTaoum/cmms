@@ -18,10 +18,10 @@ services:
     build: ./api
     restart: always
     environment:
-      DB_URL: jdbc:mysql://db:3306/u898365229_cmms
-      DB_USERNAME: u898365229_johntaoum11
-      DB_PASSWORD: Jmnhuk123$
-      FRONTEND_URL: http://82.25.115.95
+    SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/u898365229_cmms
+    SPRING_DATASOURCE_USERNAME: u898365229_johntaoum11
+    SPRING_DATASOURCE_PASSWORD: Jmnhuk123$
+    FRONTEND_URL: http://82.25.115.95
     ports:
       - "8080:8080"
     depends_on:
