@@ -1,49 +1,45 @@
 spring:
   datasource:
-    # url: jdbc:h2:mem:test_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    url: jdbc:postgresql://${DB_URL}
-    username: ${DB_USER}
-    password: ${DB_PWD}
-  #  sql:
-  #    init:
-  #      data-locations: classpath:data-preprod.sql
-  #    tomcat:
-  #      max-wait: 20000
-  #      max-active: 50
-  #      max-idle: 20
-  #      min-idle: 15
+    url: jdbc:mysql://mysql.hostinger.com:3306/u898365229_cmms
+    username: u898365229_johntaoum11
+    password: Jmnhuk123$
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
   jackson:
     serialization:
       fail-on-empty-beans: false
+
   liquibase:
     change-log: classpath:/db/master.xml
     enabled: true
+
   messages:
     encoding: UTF-8
+
   servlet:
     multipart:
       max-request-size: 7MB
       max-file-size: 7MB
+
   profiles:
     active: dev
+
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
     properties:
       hibernate:
         enable_lazy_load_no_trans: true
         format_sql: true
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        dialect: org.hibernate.dialect.MySQL8Dialect
         id:
           new_generator_mappings: false
     defer-datasource-initialization: false
-    properties.mail.smtp:
-      auth: true
-      starttls.enable: true
-      ssl.trust: smtp.gmail.com
+
   sql:
     init:
       mode: always
@@ -61,7 +57,7 @@ spring:
       ssl.trust: smtp.gmail.com
 
 server:
-  port: 8080 # This is the default port anyway, but you can change it here
+  port: 8080
 
 security:
   jwt:
@@ -69,23 +65,30 @@ security:
       secret-key: ${JWT_SECRET_KEY}
       expire-length: 1209600000 # 1000*60*60*24*14
   invitation-via-email: ${INVITATION_VIA_EMAIL}
+
 frontend:
   url: ${PUBLIC_FRONT_URL}
+
 mail:
   recipients: ${MAIL_RECIPIENTS}
   enable: ${ENABLE_EMAIL_NOTIFICATIONS}
+
 superAdmin:
   role:
     name: SuperAdministratorGrash@p;l
+
 fast-spring:
   username: ${FASTSPRING_USER}
   password: ${FASTSPRING_PWD}
+
 management:
   health:
     mail:
       enabled: true
+
 api:
   host: ${PUBLIC_API_URL}
+
 storage:
   type: ${STORAGE_TYPE}
   minio:
